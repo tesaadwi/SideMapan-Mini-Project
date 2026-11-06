@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SideMapan — UMKM Desa Gilang</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="/" class="brand"><span>Side</span>Mapan</a>
+        <nav>
+            <a href="/" class="active">Beranda</a>
+            <a href="#daftar-umkm">Jelajahi UMKM</a>
+            <a href="tambah.html" class="nav-button">Daftarkan UMKM</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <span class="eyebrow">UMKM LOKAL DESA GILANG</span>
+                <h1>Kenali Produk Lokal,<br><span>Dukung Usaha Warga.</span></h1>
+                <p>Temukan beragam usaha dan produk unggulan masyarakat Desa Gilang dalam satu tempat.</p>
+                <a href="#daftar-umkm" class="button-primary">Jelajahi UMKM &rarr;</a>
+            </div>
+            <div class="hero-decoration" aria-hidden="true">
+                <div class="circle circle-one"></div>
+                <div class="circle circle-two"></div>
+                <div class="hero-card">
+                    <span class="hero-icon">🌿</span>
+                    <strong>Bangga Produk Lokal</strong>
+                    <small>Bertumbuh bersama masyarakat</small>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="daftar-umkm">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">TEMUKAN USAHA LOKAL</span>
+                    <h2>UMKM Desa Gilang</h2>
+                    <p>Informasi usaha warga yang terhimpun dalam satu tempat.</p>
+                </div>
+                <a href="tambah.html" class="button-outline">+ Tambah UMKM</a>
+            </div>
+
+            <div id="status" class="status-message">Memuat data UMKM...</div>
+            <div id="umkm-list" class="umkm-grid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="/" class="brand"><span>Side</span>Mapan</a>
+        <p>Mendukung UMKM, menguatkan ekonomi Desa Gilang.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

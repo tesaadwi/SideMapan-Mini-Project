@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah UMKM - SideMapan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="/" class="logo">SideMapan<span>.</span></a>
+
+            <nav>
+                <a href="/">Beranda</a>
+                <a href="/tambah.html" class="active">Tambah UMKM</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container form-page">
+        <div class="form-heading">
+            <p class="eyebrow">PARTISIPASI UMKM DESA GILANG</p>
+            <h1>Daftarkan UMKM Anda</h1>
+            <p>
+                Bantu masyarakat mengenal usaha lokal Desa Gilang
+                dengan menambahkan informasi UMKM Anda.
+            </p>
+        </div>
+
+        <form id="formUmkm" class="umkm-form">
+            <div class="form-group">
+                <label for="nama_usaha">Nama usaha <span>*</span></label>
+                <input
+                    type="text"
+                    id="nama_usaha"
+                    name="nama_usaha"
+                    placeholder="Contoh: Keripik Bu Siti"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="nama_pemilik">Nama pemilik <span>*</span></label>
+                <input
+                    type="text"
+                    id="nama_pemilik"
+                    name="nama_pemilik"
+                    placeholder="Masukkan nama pemilik usaha"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="kategori">Kategori usaha</label>
+                <input
+                    type="text"
+                    id="kategori"
+                    name="kategori"
+                    placeholder="Contoh: Makanan, Minuman, Kerajinan"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="no_telepon">Nomor telepon</label>
+                <input
+                    type="tel"
+                    id="no_telepon"
+                    name="no_telepon"
+                    placeholder="Masukkan nomor telepon"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="alamat">Alamat usaha</label>
+                <textarea
+                    id="alamat"
+                    name="alamat"
+                    rows="3"
+                    placeholder="Masukkan alamat usaha"
+                ></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="deskripsi">Deskripsi usaha</label>
+                <textarea
+                    id="deskripsi"
+                    name="deskripsi"
+                    rows="4"
+                    placeholder="Ceritakan produk atau layanan usaha Anda"
+                ></textarea>
+            </div>
+
+            <div class="form-note">
+                <strong>Informasi:</strong>
+                Data UMKM yang dikirim akan berstatus menunggu verifikasi.
+            </div>
+
+            <div id="pesanForm" class="form-message" role="status" aria-live="polite"></div>
+
+            <div class="form-actions">
+                <a href="/" class="btn-secondary">Kembali</a>
+                <button type="submit" class="btn-primary" id="btnSimpan">
+                    Kirim Data UMKM
+                </button>
+            </div>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 SideMapan — UMKM Desa Gilang.</p>
+        </div>
+    </footer>
+
+    <script src="tambah.js"></script>
+</body>
+</html>

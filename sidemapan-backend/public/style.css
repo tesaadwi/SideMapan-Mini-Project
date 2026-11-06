@@ -1,0 +1,517 @@
+
+:root {
+    --green-dark: #205c43;
+    --green: #347a57;
+    --green-light: #eaf4eb;
+    --green-pale: #f6f9f3;
+    --text: #26372d;
+    --muted: #748077;
+    --white: #ffffff;
+    --border: #e4eae2;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.navbar {
+    min-height: 76px;
+    padding: 16px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    border-bottom: 1px solid var(--border);
+    background: var(--white);
+}
+
+.brand {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: var(--green-dark);
+}
+
+.brand span {
+    color: var(--green);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+nav a {
+    color: #59685e;
+}
+
+nav a.active,
+nav a:hover {
+    color: var(--green-dark);
+}
+
+.nav-button,
+.button-primary {
+    display: inline-block;
+    padding: 12px 19px;
+    border-radius: 9px;
+    background: var(--green-dark);
+    color: var(--white);
+    font-weight: 700;
+}
+
+.nav-button:hover,
+.button-primary:hover {
+    background: var(--green);
+    color: var(--white);
+}
+
+.hero {
+    min-height: 410px;
+    padding: 65px 9%;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 40px;
+    overflow: hidden;
+    background: var(--green-pale);
+}
+
+.eyebrow {
+    color: var(--green);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+.hero h1 {
+    margin: 15px 0;
+    font-size: clamp(34px, 4vw, 49px);
+    line-height: 1.2;
+    letter-spacing: -1.6px;
+}
+
+.hero h1 span {
+    color: var(--green);
+}
+
+.hero p {
+    max-width: 520px;
+    margin-bottom: 28px;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.hero-decoration {
+    min-height: 240px;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: #d9e9d8;
+}
+
+.circle-one {
+    width: 230px;
+    height: 230px;
+}
+
+.circle-two {
+    width: 160px;
+    height: 160px;
+    background: #c5dfc6;
+}
+
+.hero-card {
+    position: relative;
+    z-index: 1;
+    width: min(270px, 100%);
+    padding: 27px;
+    border: 1px solid #ffffff;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 16px 45px rgba(32, 92, 67, 0.12);
+    text-align: center;
+}
+
+.hero-icon {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 42px;
+}
+
+.hero-card strong,
+.hero-card small {
+    display: block;
+}
+
+.hero-card small {
+    margin-top: 5px;
+    color: var(--muted);
+}
+
+.content-section {
+    padding: 65px 7%;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.section-heading h2 {
+    margin: 7px 0;
+    font-size: 29px;
+    letter-spacing: -0.7px;
+}
+
+.section-heading p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.button-outline {
+    display: inline-block;
+    padding: 10px 15px;
+    border: 1px solid #bfd2c2;
+    border-radius: 9px;
+    color: var(--green-dark);
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.button-outline:hover {
+    background: var(--green-light);
+}
+
+.status-message {
+    padding: 20px;
+    border-radius: 10px;
+    background: var(--green-pale);
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.umkm-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.umkm-card {
+    padding: 23px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--white);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.umkm-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(32, 92, 67, 0.08);
+}
+
+.umkm-symbol {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    background: var(--green-light);
+    color: var(--green-dark);
+    font-size: 23px;
+}
+
+.category {
+    display: inline-block;
+    padding: 4px 9px;
+    border-radius: 20px;
+    background: var(--green-light);
+    color: var(--green-dark);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.umkm-card h3 {
+    margin: 13px 0 5px;
+    font-size: 18px;
+}
+
+.umkm-card p {
+    margin: 5px 0;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.umkm-card .detail-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+footer {
+    padding: 28px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-top: 1px solid var(--border);
+    background: var(--green-pale);
+}
+
+footer p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+@media (max-width: 760px) {
+    .navbar,
+    .section-heading,
+    footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 45px 7%;
+    }
+
+    .hero-decoration {
+        min-height: 210px;
+    }
+
+    .umkm-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* HALAMAN FORM TAMBAH UMKM */
+.form-page {
+    max-width: 780px;
+    margin: 0 auto;
+    padding-top: 56px;
+    padding-bottom: 72px;
+}
+
+.form-heading {
+    margin-bottom: 28px;
+}
+
+.form-heading h1 {
+    color: #174d35;
+    font-size: 36px;
+    line-height: 1.2;
+    margin: 10px 0 14px;
+}
+
+.form-heading p:not(.eyebrow) {
+    color: #64756a;
+    line-height: 1.8;
+}
+
+.eyebrow {
+    color: #36845b;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.umkm-form {
+    background: #ffffff;
+    border: 1px solid #e1ece4;
+    border-radius: 18px;
+    padding: 32px;
+    box-shadow: 0 12px 35px rgba(23, 77, 53, 0.06);
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 9px;
+    color: #244b35;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group label span {
+    color: #d94a4a;
+}
+
+.form-group input,
+.form-group textarea {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #d6e3d9;
+    border-radius: 10px;
+    background: #fbfdfb;
+    color: #243b2c;
+    font: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #36845b;
+    box-shadow: 0 0 0 3px rgba(54, 132, 91, 0.12);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-note {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background: #f0f7f1;
+    color: #41634c;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.form-message {
+    display: none;
+    padding: 13px 15px;
+    margin-bottom: 18px;
+    border-radius: 9px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.form-message.success,
+.form-message.error {
+    display: block;
+}
+
+.form-message.success {
+    background: #e7f6eb;
+    color: #21663b;
+}
+
+.form-message.error {
+    background: #fff0f0;
+    color: #a52f2f;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 19px;
+    border-radius: 9px;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    border: 1px solid #246b45;
+    background: #246b45;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #174d35;
+}
+
+.btn-primary:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.btn-secondary {
+    border: 1px solid #d6e3d9;
+    background: #ffffff;
+    color: #315a40;
+}
+
+.btn-secondary:hover {
+    background: #f0f7f1;
+}
+
+.navbar nav a.active {
+    color: #246b45;
+    font-weight: 700;
+}
+
+@media (max-width: 600px) {
+    .form-page {
+        padding: 36px 18px 48px;
+    }
+
+    .form-heading h1 {
+        font-size: 29px;
+    }
+
+    .umkm-form {
+        padding: 22px 18px;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
